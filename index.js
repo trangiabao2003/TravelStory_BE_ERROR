@@ -95,9 +95,9 @@ app.post("/login", async (req, res) => {
 	// const user = await User.findOne({ email });
 	const user = await User.findOne(req.body);
 
-	if (!user) {
-		return res.status(400).json({ message: "User not found" });
-	}
+	// if (!user) {
+	// 	return res.status(400).json({ message: "User not found" });
+	// }
 	const accessToken = jwt.sign(
 		{ userId: user?._id },
 		process.env.ACCESS_TOKEN_SECRET,
