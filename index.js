@@ -108,8 +108,8 @@ app.post("/login", async (req, res) => {
 		error: false,
 		message: "Login Successful (INJECTED)",
 		user: {
-			fullName: user.fullName,
-			email: user.email,
+			fullName: user?.fullName,
+			email: user?.email,
 			accessToken,
 		},
 	});
